@@ -14,17 +14,40 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="../fonts.css" type="text/css""/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body >
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+	<body class="flex flex-col justify-center items-center bg-customBackgroundEnd" >
+
 		<slot />
 	</body>
 </html>
 <style is:global>
+
+	html {
+		font-family: system-ui, -apple-system;
+	}
 	body {
-		background: #050505;
+		display: flex;
+		flex-direction: column;
 		min-height: 100vh;
+		height: 100vh;
+		width: 100vw;
+		margin: 0;
+		padding: 0;
+	}
+	main {
+		flex: 1;
+	}
+	.glass-effect {
+		backdrop-filter: blur(12px) saturate(200%);
+		-webkit-backdrop-filter: blur(12px) saturate(200%);
+		background-color: rgba(255, 255, 255, 0.25);
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.125);
+	}
+	.rounabold {
+		font-family: 'rounabold';
 	}
 </style>
