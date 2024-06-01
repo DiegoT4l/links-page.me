@@ -2,6 +2,7 @@
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import Avatar from '../components/Avatar.astro';
 ---
 
 <Layout 
@@ -10,11 +11,9 @@ import Footer from '../components/Footer.astro';
 >
     <Hero />
     <main id="profile" class="w-[98%]">
-        <section id="socialMedia">
-            <div class="h-[200px] w-full glass-effect">
-                <h2 class="text-3xl font-bold text-center text-white mt-10 font-rounabold">Mis Redes Sociales</h2>
-            </div>
-        </section>
+        <div class="relative">
+            <Avatar />
+        </div>
     </main>
 
     <Footer />

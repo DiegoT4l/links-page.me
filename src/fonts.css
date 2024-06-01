@@ -1,33 +1,13 @@
 @font-face {
     font-family: 'rounabold';
-    src: url('./assets/fonts/rouna-bold-webfont.eot');
-    src: url('./assets/fonts/rouna-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/rouna-bold-webfont.woff2') format('woff2'),
-    url('./assets/fonts/rouna-bold-webfont.woff') format('woff'),
-    url('./assets/fonts/rouna-bold-webfont.ttf') format('truetype');
-    font-weight: normal;
+    src: url(./assets/fonts/rouna-bold-webfont.ttf) format('font/truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'rounabold';
-    src: url('./assets/fonts/rouna-bold-webfont.eot');
-    src: url('./assets/fonts/rouna-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/rouna-bold-webfont.woff2') format('woff2'),
-    url('./assets/fonts/rouna-bold-webfont.woff') format('woff'),
-    url('./assets/fonts/rouna-bold-webfont.ttf') format('truetype');
+    src: url(./assets/fonts/rouna-bold-webfont.ttf) format('font/truetype');
     font-weight: 700;
     font-style: bold;
-
-}
-
-@font-face {
-    font-family: 'rounabold';
-    src: url('./assets/fonts/rouna-bold-webfont.eot');
-    src: url('./assets/fonts/rouna-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/rouna-bold-webfont.woff2') format('woff2'),
-    url('./assets/fonts/rouna-bold-webfont.woff') format('woff'),
-    url('./assets/fonts/rouna-bold-webfont.ttf') format('truetype');
-    font-weight: 900;
-    font-style: black;
 }
