@@ -3,6 +3,7 @@ import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import Avatar from '../components/Avatar.astro';
+import Link from '../components/Link.astro';
 ---
 
 <Layout 
@@ -14,6 +15,12 @@ import Avatar from '../components/Avatar.astro';
         <div class="relative">
             <Avatar />
         </div>
+
+        <section class="w-full mt-48 flex flex-col justify-center items-center gap-4" id="mediaLinks">
+            <div>
+                <Link />
+            </div>
+        </section>
     </main>
 
     <Footer />

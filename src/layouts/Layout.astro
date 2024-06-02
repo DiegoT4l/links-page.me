@@ -14,19 +14,27 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="../fonts.css" type="text/css"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col justify-center items-center bg-[#09090b]" >
+	<body
+		class="flex flex-col font-rounabold justify-center items-center bg-[#09090b]"
+	>
 		<slot />
 	</body>
 </html>
-<style is:global>
 
-	html {
-		font-family: system-ui, -apple-system;
-	}
+<style is:global>
+	@font-face {
+    font-family: 'rounabold';
+    src: url('rouna-bold-webfont.eot');
+    src: url('rouna-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('rouna-bold-webfont.woff2') format('woff2'),
+        url('rouna-bold-webfont.woff') format('woff'),
+        url('rouna-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 	body {
 		display: flex;
 		flex-direction: column;
@@ -45,8 +53,5 @@ const { title, description } = Astro.props;
 		background-color: rgba(255, 255, 255, 0.25);
 		border-radius: 12px;
 		border: 1px solid rgba(255, 255, 255, 0.125);
-	}
-	.rounabold {
-		font-family: 'rounabold';
 	}
 </style>
