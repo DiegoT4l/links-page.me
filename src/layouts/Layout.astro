@@ -18,23 +18,37 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body
-		class="flex flex-col font-rounabold justify-center items-center bg-[#09090b]"
+		class="flex flex-col font-rounabold justify-center items-center dark:bg-[#09090b]"
 	>
 		<slot />
 	</body>
 </html>
 
+<script>
+	// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+	if (
+		localStorage.getItem("color-theme") === "dark" ||
+		(!("color-theme" in localStorage) &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches)
+	) {
+		document.documentElement.classList.add("dark");
+	} else {
+		document.documentElement.classList.remove("dark");
+	}
+</script>
+
 <style is:global>
 	@font-face {
-    font-family: 'rounabold';
-    src: url('rouna-bold-webfont.eot');
-    src: url('rouna-bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('rouna-bold-webfont.woff2') format('woff2'),
-        url('rouna-bold-webfont.woff') format('woff'),
-        url('rouna-bold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+		font-family: "rounabold";
+		src: url("rouna-bold-webfont.eot");
+		src:
+			url("rouna-bold-webfont.eot?#iefix") format("embedded-opentype"),
+			url("rouna-bold-webfont.woff2") format("woff2"),
+			url("rouna-bold-webfont.woff") format("woff"),
+			url("rouna-bold-webfont.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
 	body {
 		display: flex;
 		flex-direction: column;
@@ -55,3 +69,5 @@ const { title, description } = Astro.props;
 		border: 1px solid rgba(255, 255, 255, 0.125);
 	}
 </style>
+
+
