@@ -11,7 +11,7 @@ export default {
 				'custom-black': 'rgb(9, 9, 11)',
 			},
 			backgroundImage: {
-				'custom-gradient': 'linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, rgb(9, 9, 11) 95%, rgb(9, 9, 11))',
+				'custom-gradient': 'linear-gradient(#09090b00, #09090b)',
 			},
 			fontFamily: {
 				'rounabold': ['rounabold'],
